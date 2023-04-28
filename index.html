@@ -9,17 +9,98 @@
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/my.css">
 
 
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
   <header class="bg-info p-3">
     <!-- place navbar here -->
     <h1 class="text-center text-light display-3">FilmWeb</h1>
   </header>
   <main>
+<div id="carouselId" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="Fourth slide"></li>
 
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="https://picsum.photos/id/75/1200/300" class="w-100 d-block" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src="https://picsum.photos/id/69/1200/300" class="w-100 d-block" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://picsum.photos/id/56/1200/300" class="w-100 d-block" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="https://picsum.photos/id/72/1200/300" class="w-100 d-block" alt="Fourth slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+    
+</div>
   </main>
   <footer class="bg-dark text-light text-center p-2">
     <!-- place footer here -->
@@ -29,7 +110,13 @@
   
 
   <script src="js/bootstrap.bundle.min.js"></script>
-
+<script>
+  const carousel = document.getElementById('carouselId');
+  //carousel.style.display = 'none';
+  carousel.addEventListener('mouseover', function(){
+    alert('Bacha........');
+  })
+</script>
 </body>
 
 </html>
