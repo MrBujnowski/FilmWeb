@@ -112,9 +112,20 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 <script>
   const carousel = document.getElementById('carouselId');
+  const nadpis=document.querySelector('.navbar-light');
+
+function nahodnaBarva(){
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+
+  return  `rgb(${r}, ${g}, ${b})`;
+}
+
   //carousel.style.display = 'none';
-  carousel.addEventListener('mouseover', function(){
-    alert('Bacha........');
+  carousel.addEventListener('slide.bs.carousel', function(){
+    console.log(nahodnaBarva());
+    nadpis.style.setProperty('background-color', nahodnaBarva(), 'important');
   })
 </script>
 </body>
