@@ -51,7 +51,7 @@
 
   <header class="bg-info p-3">
     <!-- place navbar here -->
-    <h1 class="text-center text-light display-3">FilmWeb</h1>
+    <h1 class="text-center text-light display-3">Matrix</h1>
   </header>
   <main>
         <!-- Použití prvku carousel -->
@@ -64,36 +64,39 @@
           <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
           <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="Fourth slide"></li>
         </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img src="https://picsum.photos/id/75/1200/300" class="w-100 d-block" alt="First slide" />
+        <div class="container">
+        <div class="carousel-inner"  role="listbox">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="img/matrix1.jpg" class="w-100 d-block img-fluid"  alt="First slide" />
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
+              <h3>The Matrix</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae aperiam sunt adipisci optio labore, sed, natus aut aliquid vitae iusto fuga eum quas ex,
+                 quod libero quia totam! Cupiditate, necessitatibus?</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="img/s-l1200.jpg" class="w-100 d-block" alt="Second slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Matrix Reloaded</h3>
               <p>Description</p>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="1000">
-            <img src="https://picsum.photos/id/69/1200/300" class="w-100 d-block" alt="Second slide" />
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="img/matrix3.jpg" class="w-100 d-block" alt="Third slide" />
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
+              <h3>Matrix Revolutions</h3>
               <p>Description</p>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="https://picsum.photos/id/56/1200/300" class="w-100 d-block" alt="Third slide" />
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="img/matrix4.jpg" class="w-100 d-block" alt="Fourth slide" />
             <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
-              <p>Description</p>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="https://picsum.photos/id/72/1200/300" class="w-100 d-block" alt="Fourth slide" />
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Title</h3>
+              <h3>Matrix Resurrections</h3>
               <p>Description</p>
             </div>
           </div>
         </div>
+      </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -182,13 +185,14 @@
     <p>&copy; 2023 - Antonín Bujnovský, IT1</p>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
-
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!--
+
   <script>
     const carousel = document.getElementById("carouselId");
     const nadpis = document.querySelector(".navbar-light");
 
-    function nahodnaBarva() {
+   function nahodnaBarva() {
       let r = Math.floor(Math.random() * 256);
       let g = Math.floor(Math.random() * 256);
       let b = Math.floor(Math.random() * 256);
@@ -206,6 +210,7 @@
       );
     });
   </script>
+  -->
 </body>
 
 </html>
