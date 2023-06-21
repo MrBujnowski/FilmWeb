@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <title>Kvíz</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/my.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page">Home <span
+                class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="form-control me-sm-2" type="text" placeholder="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <h1>Quiz</h1>
+    <div id="progressBar" class="progress mb-4">
+        <div id="progressBarInner" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <form id="quizForm">
+        <div class="form-group" id="question1">
+            <p>Jaký herec hrál Neo?</p>
+        </div>
+        <div class="form-group" id="question2" style="display: none;">
+            <!-- Otázka 2 -->
+        </div>
+        <div class="form-group" id="question3" style="display: none;">
+            <!-- Otázka 3 -->
+        </div>
+        <div class="form-group" id="question4" style="display: none;">
+            <!-- Otázka 4 -->
+        </div>
+        <div class="form-group" id="question5" style="display: none;">
+            <!-- Otázka 5 -->
+        </div>
+        <!-- Přidejte další otázky podle potřeby -->
+        <div id="navigationButtons" class="text-center">
+            <button type="button" class="btn btn-secondary" id="previousButton" disabled>Zpět</button>
+            <button type="button" class="btn btn-primary" id="nextButton">Další</button>
+        </div>
+        <button type="submit" class="btn btn-success mt-3" id="evaluateButton" style="display: none;">Zvyhodnotit test</button>
+    </form>
+    <div id="result" class="mt-3"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const form = document.getElementById("quizForm");
+    const previousButton = document.getElementById("previousButton");
+    const nextButton = document.getElementById("nextButton");
+    const evaluateButton = document.getElementById("evaluateButton");
+    const progressBarInner = document.getElementById("progressBarInner");
+    const questions = form.getElementsByClassName("form-group");
+    const totalQuestions = questions.length;
+    let currentQuestion = 0;
+
+    // Funkce pro přepínání otázek
+    function switchQuestion(direction) {
+        questions[currentQuestion].style.display = "none";
+        currentQuestion += direction;
+        questions[currentQuestion].style.display = "block";
+
+        // Změna viditelnosti tlačítek
+        if (currentQuestion === 0) {
+            previousButton.disabled = true;
+        } else {
+            previousButton.disabled = false;
+        }
+
+        if (currentQuestion === totalQuestions - 1) {
+            nextButton.style.display = "none";
+            evaluateButton.style.display = "block";
+        } else {
+            nextButton.style.display = "block";
+            evaluateButton.style.display = "none";
+        }
+
+        // Aktualizace progress baru
+        const progress = ((currentQuestion + 1) / totalQuestions) * 100;
+        progressBarInner.style.width = progress + "%";
+        progressBarInner.setAttribute("aria-valuenow", progress);
+    }
+
+    // Přiřazení funkce k tlačítkům
+    previousButton.addEventListener("click", () => switchQuestion(-1));
+    nextButton.addEventListener("click", () => switchQuestion(1));
+
+    // Funkce pro vyhodnocení kvízu
+    function evaluateQuiz(event) {
+        event.preventDefault();
+
+        // Zde můžete získat odpovědi z formuláře a vyhodnotit je
+
+        // Zobrazení celkového počtu bodů
+        const result = document.getElementById("result");
+        result.innerHTML = "<p>Celkový počet bodů: X</p>"; // Nahraďte X skutečným počtem bodů
+
+        // Skrytí navigačních tlačítek
+        const navigationButtons = document.getElementById("navigationButtons");
+        navigationButtons.style.display = "none";
+    }
+
+    // Přiřazení funkce evaluateQuiz k události odeslání formuláře
+    form.addEventListener("submit", evaluateQuiz);
+</script>
+  </body>
