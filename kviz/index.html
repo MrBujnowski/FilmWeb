@@ -14,134 +14,189 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Home <span
-                class="visually-hidden">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
-            </div>
-          </li>
-        </ul>
-        <form class="d-flex my-2 my-lg-0">
-          <input class="form-control me-sm-2" type="text" placeholder="Search" />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
-  <div class="container">
-    <h1>Quiz</h1>
-    <div id="progressBar" class="progress mb-4">
-        <div id="progressBarInner" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="container mt-5">
+    <h2>Kvíz</h2>
+    <div id="progressBar" class="progress mt-4">
+        <div id="progressBarInner" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
     <form id="quizForm">
-        <div class="form-group" id="question1">
-            <p>Jaký herec hrál Neo?</p>
+        <div class="form-group">
+            <h4>1. Otázka</h4>
+            <p>Kolik je k dnešnímu dni dílů matrixu?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="question1a" value="incorrect">
+                <label class="form-check-label" for="question1a">a) 2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="question1b" value="correct">
+                <label class="form-check-label" for="question1b">b) 4</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="question1c" value="incorrect">
+                <label class="form-check-label" for="question1c">c) 5</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" id="question1d" value="incorrect">
+                <label class="form-check-label" for="question1d">d) 3</label>
+            </div>
         </div>
         <div class="form-group" id="question2" style="display: none;">
-            <!-- Otázka 2 -->
+            <h4>2. Otázka</h4>
+            <p>Který člověk režíroval všechny filmy matrixu?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" id="question2a" value="incorrect">
+                <label class="form-check-label" for="question2a">a) Tom Tykwer</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" id="question2b" value="incorrect">
+                <label class="form-check-label" for="question2b">b) John Toll</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" id="question2c" value="correct">
+                <label class="form-check-label" for="question2c">c) Lana Wachowski</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" id="question2d" value="incorrect">
+                <label class="form-check-label" for="question2d">d) Neo</label>
+            </div>
         </div>
         <div class="form-group" id="question3" style="display: none;">
-            <!-- Otázka 3 -->
+            <h4>3. Otázka</h4>
+            <p>Jaký je žánr filmů matrix?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" id="question3a" value="incorrect">
+                <label class="form-check-label" for="question3a">a) Fantasy</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" id="question3b" value="correct">
+                <label class="form-check-label" for="question3b">b) Scifi</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" id="question3c" value="correct">
+                <label class="form-check-label" for="question3c">c) Akční</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" id="question3d" value="incorrect">
+                <label class="form-check-label" for="question3d">d) Horror</label>
+            </div>
         </div>
         <div class="form-group" id="question4" style="display: none;">
-            <!-- Otázka 4 -->
+            <h4>4. Otázka</h4>
+            <p>Kterým směrem se nachází sever?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" id="question4a" value="incorrect">
+                <label class="form-check-label" for="question4a">a) Východ</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" id="question4b" value="correct">
+                <label class="form-check-label" for="question4b">b) Sever</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" id="question4c" value="incorrect">
+                <label class="form-check-label" for="question4c">c) Západ</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" id="question4d" value="incorrect">
+                <label class="form-check-label" for="question4d">d) Jih</label>
+            </div>
         </div>
         <div class="form-group" id="question5" style="display: none;">
-            <!-- Otázka 5 -->
+            <h4>5. Otázka</h4>
+            <p>Které město je hlavním městem Kanady?</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" id="question5a" value="incorrect">
+                <label class="form-check-label" for="question5a">a) Toronto</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" id="question5b" value="incorrect">
+                <label class="form-check-label" for="question5b">b) Vancouver</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" id="question5c" value="correct">
+                <label class="form-check-label" for="question5c">c) Ottawa</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" id="question5d" value="incorrect">
+                <label class="form-check-label" for="question5d">d) Montreal</label>
+            </div>
         </div>
-        <!-- Přidejte další otázky podle potřeby -->
-        <div id="navigationButtons" class="text-center">
-            <button type="button" class="btn btn-secondary" id="previousButton" disabled>Zpět</button>
-            <button type="button" class="btn btn-primary" id="nextButton">Další</button>
+        <div class="text-center mt-4">
+            <button type="button" id="prevButton" class="btn btn-primary mr-2" style="display: none;">Předchozí</button>
+            <button type="button" id="nextButton" class="btn btn-primary ml-2">Další</button>
+            <button type="submit" id="submitQuizButton" class="btn btn-success" style="display: none;">Zvýhodnoť test</button>
         </div>
-        <button type="submit" class="btn btn-success mt-3" id="evaluateButton" style="display: none;">Zvyhodnotit test</button>
     </form>
-    <div id="result" class="mt-3"></div>
+    <div id="score" class="mt-4" style="display: none;">
+        <h3>Vaše skóre: <span id="scoreValue"></span>/5</h3>
+    </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     const form = document.getElementById("quizForm");
-    const previousButton = document.getElementById("previousButton");
+    const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
-    const evaluateButton = document.getElementById("evaluateButton");
-    const progressBarInner = document.getElementById("progressBarInner");
-    const questions = form.getElementsByClassName("form-group");
-    const totalQuestions = questions.length;
-    let currentQuestion = 0;
+    const submitButton = document.getElementById("submitQuizButton");
+    const score = document.getElementById("score");
+    const scoreValue = document.getElementById("scoreValue");
+    let currentQuestion = 1;
 
-    // Funkce pro přepínání otázek
-    function switchQuestion(direction) {
-        questions[currentQuestion].style.display = "none";
-        currentQuestion += direction;
-        questions[currentQuestion].style.display = "block";
-
-        // Změna viditelnosti tlačítek
-        if (currentQuestion === 0) {
-            previousButton.disabled = true;
-        } else {
-            previousButton.disabled = false;
+    function showQuestion(questionNumber) {
+        const questions = document.querySelectorAll(".form-group");
+        for (let i = 0; i < questions.length; i++) {
+            questions[i].style.display = "none";
         }
-
-        if (currentQuestion === totalQuestions - 1) {
+        questions[questionNumber - 1].style.display = "block";
+        if (questionNumber === 1) {
+            prevButton.style.display = "none";
+        } else {
+            prevButton.style.display = "inline-block";
+        }
+        if (questionNumber === questions.length) {
             nextButton.style.display = "none";
-            evaluateButton.style.display = "block";
+            submitButton.style.display = "inline-block";
         } else {
-            nextButton.style.display = "block";
-            evaluateButton.style.display = "none";
+            nextButton.style.display = "inline-block";
+            submitButton.style.display = "none";
         }
-
-        // Aktualizace progress baru
-        const progress = ((currentQuestion + 1) / totalQuestions) * 100;
-        progressBarInner.style.width = progress + "%";
-        progressBarInner.setAttribute("aria-valuenow", progress);
     }
 
-    // Přiřazení funkce k tlačítkům
-    previousButton.addEventListener("click", () => switchQuestion(-1));
-    nextButton.addEventListener("click", () => switchQuestion(1));
+    function updateProgress() {
+        const progressBarInner = document.getElementById("progressBarInner");
+        const progress = (currentQuestion - 1) / (document.querySelectorAll(".form-group").length - 1) * 100;
+        progressBarInner.style.width = `${progress}%`;
+    }
 
-    // Funkce pro vyhodnocení kvízu
     function evaluateQuiz(event) {
         event.preventDefault();
+        const radios = document.querySelectorAll("input[type='radio']:checked");
+        let scoreCount = 0;
+        let answered = false;
 
-        // Zde můžete získat odpovědi z formuláře a vyhodnotit je
+        for (let i = 0; i < radios.length; i++) {
+            const radio = radios[i];
+            if (radio.value === "correct") {
+                scoreCount++;
+            }
+        }
 
-        // Zobrazení celkového počtu bodů
-        const result = document.getElementById("result");
-        result.innerHTML = "<p>Celkový počet bodů: X</p>"; // Nahraďte X skutečným počtem bodů
-
-        // Skrytí navigačních tlačítek
-        const navigationButtons = document.getElementById("navigationButtons");
-        navigationButtons.style.display = "none";
+        scoreValue.innerText = scoreCount;
+        score.style.display = "block";
     }
 
-    // Přiřazení funkce evaluateQuiz k události odeslání formuláře
+    prevButton.addEventListener("click", () => {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+        updateProgress();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+        updateProgress();
+    });
+
     form.addEventListener("submit", evaluateQuiz);
+
+    showQuestion(currentQuestion);
+    updateProgress();
 </script>
   </body>
