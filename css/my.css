@@ -24,3 +24,17 @@ h1{
 .tonda1{
     color: white !important;
 }
+.carousel-image {
+    object-fit: cover;
+    object-position:center;
+    height: 37em;
+  }
+  .film-text {
+    padding: 5% !important;
+  }
+  @media (max-width: 768px) {
+    .navbar-toggler-icon {
+      background-color: #ffffff;
+    }
+  }
+    
