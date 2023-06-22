@@ -13,9 +13,11 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+
+  <nav class="navbar navbar-expand-sm navbar-light fixed-top pozadi">
     <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="pl-3" href="index.html"><img src="img/logo-matrix1.png" width="45" alt="Logo matrix"></a>
       <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
         data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -24,18 +26,25 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Home <span
+            <a class="nav-link active obrazek tonda1" href="kviz/index.html" aria-current="page">Kvíz <span
                 class="visually-hidden">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active tonda1" href="herci/index.html" aria-current="page">Herci <span
+                class="visually-hidden">(current)</span></a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link tonda1" href="https://www.youtube.com/watch?v=uXGE0vuuaDo" target="_blank">Video</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle tonda1" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Rozcestník</a>
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
+              <a class="dropdown-item" href="#matrix1">The Matrix</a>
+              <a class="dropdown-item" href="#matrix2">Matrix Reloaded</a>
+              <a class="dropdown-item" href="#matrix3">Matrix Revolutions</a>
+              <a class="dropdown-item " href="#matrix4">The Matrix Resurrections</a>
+
             </div>
           </li>
         </ul>
@@ -48,6 +57,8 @@
       </div>
     </div>
   </nav>
+
+
 
   <header class="bg-info p-3">
     <!-- place navbar here -->
@@ -113,7 +124,7 @@
       <h2 class="text-center display-4">Matrix filmy</h2>
     </header>
         <!-- Matrix filmy -->
-      <h2 class="text-center display-5 p-5">The Matrix</h2>
+      <h2 class="text-center display-5 p-5" id="matrix1">The Matrix</h2>
         <div class="row">
           <div class="col-md-4 col-lg-3">
             <img src="img/Matrix1-poster.jpg" class="img-fluid odsazeni" alt="Obrázek">
@@ -150,7 +161,7 @@ Morpheus odhaluje Neovi, že Matrix je virtuální simulace ovládaná stroji, k
 
 
 
-        <h2 class="text-center display-5 p-5">Matrix Reloaded</h2>
+        <h2 class="text-center display-5 p-5" id="matrix2">Matrix Reloaded</h2>
         <div class="row">
           <div class="col-md-8 col-lg-4 odsazeni">
             <h3>Informace o filmu</h3>
@@ -194,7 +205,7 @@ Morpheus odhaluje Neovi, že Matrix je virtuální simulace ovládaná stroji, k
 
 
 
-        <h2 class="text-center display-5 p-5">Matrix Revolutions</h2>
+        <h2 class="text-center display-5 p-5" id="matrix3">Matrix Revolutions</h2>
         <div class="row">
           <div class="col-md-4 col-lg-3">
             <img src="img/matrix3-poster.jpg" class="img-fluid odsazeni"  width="100%" alt="Obrázek">
@@ -235,7 +246,7 @@ Neo se nakonec setkává s Architektem, stvořitelem Matrixu, který odhaluje pr
 
 
 
-        <h2 class="text-center display-5 p-5">The Matrix Resurrections</h2>
+        <h2 class="text-center display-5 p-5 matrix4" id="matrix4">The Matrix Resurrections</h2>
         <div class="row">
           <div class="col-md-8 col-lg-4 odsazeni">
             <h3>Informace o filmu</h3>
@@ -271,81 +282,15 @@ Neo se nakonec setkává s Architektem, stvořitelem Matrixu, který odhaluje pr
           <div class="col-md-4 col-lg-3">
             <img src="img/matrix4-poster.jpg" class="img-fluid odsazeni" alt="Obrázek">
           </div>
-        
         </div>
 
-
+<br>
+<br>
+<br>
 
         <!-- použití gridu a cards -->
 
-        <section id="herci" class="container-fluid">
-          <header class="bg-warning p-3 mt-3 mb-2">
-          <h2 class="text-center display-4">Profily herců</h2>
-        </header>
-          <div class="row">
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2 ">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/126/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/125/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/124/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/123/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/122/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6 mb-2">
-              <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/id/121/600/600" class="card-img-top" alt="Fotka herce">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+       
   </main>
   <footer class="bg-dark text-light text-center p-2">
     <!-- place footer here -->

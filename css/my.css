@@ -7,3 +7,20 @@
 .odsazeni1{
     margin-left:35em;
 }
+h1{
+    padding-top: 40px;
+}
+.obrazek{
+    padding-left: 10em !important;
+
+}
+.obrazek1{
+    padding-right: 15.5em !important;
+
+}
+.pozadi{
+    background-color: rgb(0, 0, 0) !important;
+}
+.tonda1{
+    color: white !important;
+}

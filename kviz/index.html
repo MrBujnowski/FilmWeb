@@ -8,14 +8,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- Bootstrap CSS v5.2.1 -->
-  <link href="/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/my.css" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/my.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 
+
+
+
 <body>
+    <main>
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top obrazek1 pozadi">
+        <div class="container">
+          <a class="pl-3" href="../index.html"><img src="../img/logo-matrix1.png" width="45" alt="Logo matrix"></a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active obrazek tonda1" href="" aria-current="page">Kvíz <span
+                    class="visually-hidden">(current)</span></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active tonda1" href="../herci/index.html" aria-current="page">Herci <span
+                    class="visually-hidden">(current)</span></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link tonda1" href="https://www.youtube.com/watch?v=uXGE0vuuaDo" target="_blank">Video</a>
+              </li>
+              <li class="nav-item dropdown visually-hidden">
+                <a class="nav-link dropdown-toggle tonda1" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Rozcestník</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#matrix1">The Matrix</a>
+                  <a class="dropdown-item" href="#matrix2">Matrix Reloaded</a>
+                  <a class="dropdown-item" href="#matrix3">Matrix Revolutions</a>
+                  <a class="dropdown-item" href="#matrix4">The Matrix Resurrections</a>
+    
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0 visually-hidden">
+              <input class="form-control me-sm-2" type="text" placeholder="Search" />
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+
   <div class="container mt-5">
-    <h2>Kvíz</h2>
+    <h1 class="text-center ">Kvíz</h1>
     <div id="progressBar" class="progress mt-4">
         <div id="progressBarInner" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
@@ -82,48 +133,48 @@
         </div>
         <div class="form-group" id="question4" style="display: none;">
             <h4>4. Otázka</h4>
-            <p>Kterým směrem se nachází sever?</p>
+            <p>V jakém filmu se nachází postava klíčníka?</p>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question4" id="question4a" value="incorrect">
-                <label class="form-check-label" for="question4a">a) Východ</label>
+                <label class="form-check-label" for="question4a">Matrix Revolutions</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="question4" id="question4b" value="correct">
-                <label class="form-check-label" for="question4b">b) Sever</label>
+                <input class="form-check-input" type="radio" name="question4" id="question4b" value="incorrect">
+                <label class="form-check-label" for="question4b">The Matrix</label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="question4" id="question4c" value="incorrect">
-                <label class="form-check-label" for="question4c">c) Západ</label>
+                <input class="form-check-input" type="radio" name="question4" id="question4c" value="correct">
+                <label class="form-check-label" for="question4c">Matrix Reloaded</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question4" id="question4d" value="incorrect">
-                <label class="form-check-label" for="question4d">d) Jih</label>
+                <label class="form-check-label" for="question4d">The Matrix Resurrections</label>
             </div>
         </div>
         <div class="form-group" id="question5" style="display: none;">
             <h4>5. Otázka</h4>
-            <p>Které město je hlavním městem Kanady?</p>
+            <p>Kdo měl na starost kameru v matrix 3?</p>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question5" id="question5a" value="incorrect">
-                <label class="form-check-label" for="question5a">a) Toronto</label>
+                <label class="form-check-label" for="question5a">a) Toronto Camel</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question5" id="question5b" value="incorrect">
-                <label class="form-check-label" for="question5b">b) Vancouver</label>
+                <label class="form-check-label" for="question5b">b) Don Davis</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question5" id="question5c" value="correct">
-                <label class="form-check-label" for="question5c">c) Ottawa</label>
+                <label class="form-check-label" for="question5c">c) Bill Pope</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="question5" id="question5d" value="incorrect">
-                <label class="form-check-label" for="question5d">d) Montreal</label>
+                <label class="form-check-label" for="question5d">d) Mark Henry</label>
             </div>
         </div>
         <div class="text-center mt-4">
             <button type="button" id="prevButton" class="btn btn-primary mr-2" style="display: none;">Předchozí</button>
             <button type="button" id="nextButton" class="btn btn-primary ml-2">Další</button>
-            <button type="submit" id="submitQuizButton" class="btn btn-success" style="display: none;">Zvýhodnoť test</button>
+            <button type="submit" id="submitQuizButton" class="btn btn-success" style="display: none;">Vyhodnotit test</button>
         </div>
     </form>
     <div id="score" class="mt-4" style="display: none;">
@@ -199,4 +250,8 @@
     showQuestion(currentQuestion);
     updateProgress();
 </script>
+</main>
+
   </body>
+  
+  </html>
